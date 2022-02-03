@@ -15,7 +15,7 @@ class PalettesView(APIView):
         else:
             return Response(palette.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def get(self):
+    def get(self, request):
         palettes = Palette.objects.all()
         data = PaletteSerializer(palettes, many=True).data
         return Response(data)
