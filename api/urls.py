@@ -5,5 +5,5 @@ from .views import palettes
 
 urlpatterns = [
     path('palettes/', palettes.PalettesView.as_view(), name='index'),
-    path('palettes/<int:id>/', palettes.PalettesView.as_view(), name='Palette-detail')
+    path('palettes/<int:id>/', palettes.PaletteView.as_view(), name='Palette-detail')
 ]

@@ -19,3 +19,28 @@ class PalettesView(APIView):
         palettes = Palette.objects.all()
         data = PaletteSerializer(palettes, many=True).data
         return Response(data)
+
+class PaletteView(APIView):
+    def patch(self, request, id):
+        palette = get_object_or_404(Palette, id=id)
+        updated_palette = PaletteSerializer(palette, data=request.data, partial=True)
+        if updated_palette.is_valid():
+            updated_palette.save()
+            return Response(updated_palette.data)
+
+    def put (self, request, id):
+        palette = get_object_or_404(Palette, id=id)
+        updated_palette = PaletteSerializer(palette, data=request.data)
+        if updated_palette.is_valid():
+            updated_palette.save()
+            return Response(updated_palette.data)
+
+    def delete(self, request, id):
+        palette = get_object_or_404(Palette, id=id)
+        palette.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    def get(self, request, id):
+        palette = get_object_or_404(Palette, id=id)
+        data = PaletteSerializer(palette).data
+        return Response(data)
