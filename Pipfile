@@ -10,7 +10,7 @@ psycopg2 = "*"
 pytz = "*"
 gunicorn = "*"
 whitenoise = "*"
-package_name="3.6"
+package_name = "version"
 
 [dev-packages]
 
