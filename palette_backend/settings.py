@@ -90,6 +90,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'palette_backend',
+        'USER': 'jgvosdtwnslzhv',
+        'PASSWORD': 'jgvosdtwnslzhv',
+        'HOST': 'ec2-18-208-24-104.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
