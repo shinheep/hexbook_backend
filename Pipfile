@@ -10,7 +10,7 @@ psycopg2 = "*"
 pytz = "*"
 gunicorn = "*"
 whitenoise = "*"
-python-decouple = "3.6"
+python_decouple = "3.6"
 
 [dev-packages]
 
