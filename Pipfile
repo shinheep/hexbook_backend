@@ -16,4 +16,3 @@ python_decouple = "3.6"
 
 [requires]
 python_version = "3.9"
-python_decouple = "3.6"
