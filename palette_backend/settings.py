@@ -89,11 +89,12 @@ WSGI_APPLICATION = 'palette_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'palette_backend',
+        'NAME': 'dbq9igrkall9de',
         'USER': 'jgvosdtwnslzhv',
         'PASSWORD': 'jgvosdtwnslzhv',
         'HOST': 'ec2-18-208-24-104.compute-1.amazonaws.com',
-        'PORT': '5432'
+        'PORT': '5432',
+        'URI': 'postgres://jgvosdtwnslzhv:b755d6acafa08edf089c2ad38db9516fe51387f4e4315af6d3be5db580c824a3@ec2-18-208-24-104.compute-1.amazonaws.com:5432/dbq9igrkall9de',
     }
 }
 
